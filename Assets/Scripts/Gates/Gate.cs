@@ -11,7 +11,7 @@ public class Gate : MonoBehaviour
     [SerializeField] float positiveValue = 4.0f;
     [SerializeField] float negativeValue = -4.0f;
     [SerializeField] float gateValue;   
-    bool fireRateGate, fireRangeGate;
+    bool fireRateGate, fireRangeGate, yearGate;
     public bool isGateActive;
     float damage;
     public BoxCollider boxCollider;
@@ -52,9 +52,19 @@ public class Gate : MonoBehaviour
 
     private void DamageSelectionAndTextUpdate()
     {
-        int rand = Random.Range(1,3);
-        damage = rand;
-        damageText.text = damage.ToString();
+        if(!yearGate)
+        {
+            int rand = Random.Range(1,3);
+            damage = rand;
+            damageText.text = damage.ToString();
+        }
+        else if(yearGate)
+        {
+            Player.instance.IncrementInGameInitYear(Mathf.RoundToInt(gateValue));
+            int rand = Random.Range(10,25);
+            damage = rand;
+            damageText.text = damage.ToString();
+        }
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -86,6 +96,10 @@ public class Gate : MonoBehaviour
             {
                 Player.instance.IncrementInGameFireRange(gateValue);
             }
+            else if(yearGate)
+            {
+                Player.instance.IncrementInGameInitYear(Mathf.RoundToInt(gateValue));
+            }
             gameObject.SetActive(false);
         }
     }
@@ -99,7 +113,7 @@ public class Gate : MonoBehaviour
 
     private void ChooseOperation()
     {
-        int chooseRand = Random.Range(0,2);
+        int chooseRand = Random.Range(0,3);
         float valueRand = Random.Range(negativeValue,positiveValue);
         float halfValueRand = RoundToClosestHalf(valueRand);
         gateValue = halfValueRand;
@@ -115,6 +129,13 @@ public class Gate : MonoBehaviour
         {
             fireRateGate = true;
             gateOperatorText.text = "Fire Rate";
+        }
+        else if(chooseRand == 2)
+        {
+            yearGate = true;
+            gateOperatorText.text = "Init Year";
+            valueRand = Random.Range(-20,30);
+            gateValue = valueRand;
         }
 
         if(gateValue >= 0)
@@ -156,7 +177,6 @@ public class Gate : MonoBehaviour
         float roundedValue = Mathf.Round(number * 2) / 2;
         return roundedValue;
     }
-
     private void GateHitEffect()
     {
         transform.DOScale(hitEffectScale,hitEffectDur).OnComplete(GateHitEffectReset);
