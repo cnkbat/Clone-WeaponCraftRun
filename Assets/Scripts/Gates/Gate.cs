@@ -60,7 +60,6 @@ public class Gate : MonoBehaviour
         }
         else if(yearGate)
         {
-            Player.instance.IncrementInGameInitYear(Mathf.RoundToInt(gateValue));
             int rand = Random.Range(10,25);
             damage = rand;
             damageText.text = damage.ToString();
