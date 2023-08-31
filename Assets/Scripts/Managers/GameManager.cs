@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
 using Cinemachine;
@@ -37,6 +36,11 @@ public class GameManager : MonoBehaviour
 
     [Header("Magazine")]
     public float magazineTravelDur;
+
+    [Header("LevelSelector")]
+    public List<GameObject> levels;
+    public int numOfPresetLevels;
+    public Transform levelSpawnTransform;
     
 
     ////
@@ -59,9 +63,23 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UpdatePlayerDamage();
+        LevelChooser();
+        endSniper = GameObject.FindGameObjectWithTag("EndSnip");
         camStartingPos = mainCam.transform.localPosition;
     }
 
+    public void LevelChooser()
+    {
+        if(Player.instance.currentLevelIndex <= numOfPresetLevels)
+        {
+            Instantiate(levels[Player.instance.currentLevelIndex],levelSpawnTransform.position,Quaternion.identity);
+        }
+        else
+        {
+            int levelRand = Random.Range(0,levels.Count);
+            Instantiate(levels[levelRand],levelSpawnTransform.position,Quaternion.identity);
+        }
+    }
     public void UpdatePlayerDamage()
     {
         playerDamage = Player.instance.playerDamage;
@@ -99,7 +117,8 @@ public class GameManager : MonoBehaviour
     // buttona basıldığında gerçekleşecek
     public void LoadNextScene()
     {
+        Player.instance.currentLevelIndex++;
         Player.instance.SavePlayerData();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(0);
     }
 }

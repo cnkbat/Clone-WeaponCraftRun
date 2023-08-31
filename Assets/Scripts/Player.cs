@@ -80,11 +80,6 @@ public class Player : MonoBehaviour
         LoadPlayerData();
         SetUpgradedValues();
         UpdatePlayersDamage();
-        
-        if(currentLevelIndex != SceneManager.GetActiveScene().buildIndex)
-        {
-            SceneManager.LoadScene(currentLevelIndex);
-        } 
 
         originalMoveSpeed = forwardMoveSpeed;
     }
@@ -128,22 +123,6 @@ public class Player : MonoBehaviour
         transform.position = newPos;
     }
 
-
-    // moves character constantly forwards and limitedly horizontal
-  /*  void MoveCharacter()
-    {
-        
-        float halfScreen = Screen.width /2;
-        
-        float finalXPos = (Input.mousePosition.x - halfScreen) / halfScreen;
-
-        horizontalPos = Mathf.Clamp(finalXPos * horizontalMsMultipiler, negativeLimitValue, positiveLimitValue);
-        
-        float verticalPos = transform.position.z + forwardMoveSpeed * Time.deltaTime;
-
-        transform.position = new Vector3(horizontalPos, transform.position.y, verticalPos);
-       
-    } */
     private void OnTriggerEnter(Collider other) 
     {
         if(other.CompareTag("MovementSlower"))
@@ -353,8 +332,6 @@ public class Player : MonoBehaviour
         currentWeapon.transform.DORotate(deathEndValue, deathDur,RotateMode.Fast);
         GetComponent<BoxCollider>().isTrigger = false;
         GetComponent<Rigidbody>().useGravity = true;
-        currentLevelIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        print(currentLevelIndex);
     }
     public void UpdatePlayersDamage()
     {

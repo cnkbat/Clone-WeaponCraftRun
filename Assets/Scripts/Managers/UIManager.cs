@@ -48,6 +48,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Slider")]
     [SerializeField] Slider weaponSlider;
+    [SerializeField] Image fillImage;
     [SerializeField] List<GameObject> blackandWhiteImages;
     [SerializeField] List<GameObject> coloredImages;
 
@@ -87,13 +88,11 @@ public class UIManager : MonoBehaviour
         
         coloredImages[Player.instance.weaponIndex].SetActive(true);
         blackandWhiteImages[Player.instance.weaponIndex].SetActive(true);
-        if(Player.instance.weaponIndex == 0)
-        {
-            weaponSlider.minValue = 1750;
-        } 
-        else weaponSlider.minValue = Player.instance.weaponChoosingInitYearsLimit[Player.instance.weaponIndex -1];
-        weaponSlider.maxValue = Player.instance.weaponChoosingInitYearsLimit[Player.instance.weaponIndex];
-        weaponSlider.value = Player.instance.GetInGameInitYear();
+
+        float fillValue = (float) Player.instance.initYear -
+           (float) Player.instance.weaponChoosingInitYearsLimit[Player.instance.weaponIndex];
+
+        fillImage.fillAmount = (fillValue + 50) / (float)50;
     }
 
     public void OnSettingsButtonPressed()
@@ -132,6 +131,7 @@ public class UIManager : MonoBehaviour
         {
             canHideStartingUI = false;
             startingHud.SetActive(false);
+            fillImage.gameObject.SetActive(false);
         }
     }
     private void MoveFinger()
@@ -209,6 +209,7 @@ public class UIManager : MonoBehaviour
             Player.instance.initYearValueIndex +=1;
             initYearLevelText.text = "Level " + (Player.instance.initYearValueIndex + 1).ToString();
             initYearCostText.text = "$" + (UpgradeManager.instance.costs[Player.instance.initYearValueIndex].ToString());
+            UpdateWeaponBar();
             UpdateMoneyText();
             Player.instance.SetUpgradedValues();
             UpdateInitYearText();

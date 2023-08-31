@@ -30,6 +30,7 @@ TagManager:
   - TouchedBrickWall
   - Chain
   - GateManager
+  - EndSnip
   layers:
   - Default
   - TransparentFX

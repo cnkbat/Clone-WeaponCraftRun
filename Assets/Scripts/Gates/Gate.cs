@@ -60,7 +60,7 @@ public class Gate : MonoBehaviour
         }
         else if(yearGate)
         {
-            int rand = Random.Range(10,25);
+            int rand = Random.Range(5,12);
             damage = rand;
             damageText.text = damage.ToString();
         }
@@ -133,7 +133,7 @@ public class Gate : MonoBehaviour
         {
             yearGate = true;
             gateOperatorText.text = "Init Year";
-            valueRand = Random.Range(-20,30);
+            valueRand = Random.Range(-20,10);
             gateValue = valueRand;
         }
 
@@ -155,9 +155,15 @@ public class Gate : MonoBehaviour
   
     private void TakeDamage()
     {
+        
         gateValue += damage;
+        if(yearGate)
+        {
+            gateValue = Mathf.Clamp(gateValue,-100,50);
+        }
         GateHitEffect();
         UpdateGateText();
+
         if(gateValue >= 0)
         {
             UpdateTheColorOfGate(greenPrimaryMaterial,greenSecondaryMat);
