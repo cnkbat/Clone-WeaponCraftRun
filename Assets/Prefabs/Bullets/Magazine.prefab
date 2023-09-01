@@ -235,7 +235,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 1
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
 --- !u!65 &790983457482698593
@@ -292,8 +292,6 @@ MonoBehaviour:
   playerCol: {fileID: 410967952163079852}
   slidingGateDOMoveDur: 0.2
   slidingGatePosRot: {x: 270, y: 0, z: 0}
-  childColliderRot: {x: 0, y: 0, z: 0}
-  childCol: {fileID: 0}
   canTravel: 0
   travelPos: {fileID: 61774392634561587}
 --- !u!1 &989875563802736204
