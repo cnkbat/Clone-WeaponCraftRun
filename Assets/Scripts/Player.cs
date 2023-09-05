@@ -53,7 +53,8 @@ public class Player : MonoBehaviour
     public int money;
     public int stars; 
     public int currentLevelIndex;
-    public float playerDamage;
+    [SerializeField] float playerDamage;
+    public float currentPlayerDamage;
 
     [HideInInspector]
     public int weaponIndex;
@@ -335,7 +336,7 @@ public class Player : MonoBehaviour
     }
     public void UpdatePlayersDamage()
     {
-        playerDamage = playerDamage + currentWeapon.GetComponent<Weapon>().damage;
+        currentPlayerDamage = playerDamage + currentWeapon.GetComponent<Weapon>().damage;
     }
 
     // SAVE LOAD
