@@ -89,6 +89,18 @@ MonoBehaviour:
   endSniper: {fileID: 0}
   rotationSpeed: {x: 0, y: 50, z: 0}
   magazineTravelDur: 1
+  levels:
+  - {fileID: 1164200669940014309, guid: 2223b2d54ce8f8d4ba655323f27d5de0, type: 3}
+  - {fileID: 9077923785288634265, guid: 855e70408a276d14d935e9cbc192f389, type: 3}
+  - {fileID: 4839722392771844536, guid: 2704ddf4a5a3dcd43a956f54b588fa30, type: 3}
+  - {fileID: 3218555650486617102, guid: 337461935b4c83146a478cf8d426731b, type: 3}
+  - {fileID: 4351759044271879948, guid: 9ff4486f90d1a7642943b30e729c42af, type: 3}
+  - {fileID: 8671937998334776759, guid: 65e174655e6fd1243ba344a20a5c7932, type: 3}
+  - {fileID: 739956098745809815, guid: 8ab38f44903bc1240adb715af5b6a142, type: 3}
+  - {fileID: 8578911668281815889, guid: d7550a410c2f37047b3ed7bab2ba6ab0, type: 3}
+  - {fileID: 8582978122854108232, guid: b74e15ebf5dc4d44da6acb362ca47c77, type: 3}
+  numOfPresetLevels: 9
+  levelSpawnTransform: {fileID: 0}
 --- !u!1 &5054385360486088417
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,38 +145,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14499cc588c1e854a87ffa7577079862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initYearValues: fe060000080700001707000026070000300700003a0700006c0700009e070000d0070000
-  incomeValues:
-  - 1
-  - 1.25
-  - 1.5
-  - 1.75
-  - 2
-  - 2.5
-  - 3
-  - 3.5
-  - 4
-  fireRateValues:
-  - 0.3
-  - 0.25
-  - 0.225
-  - 0.2
-  - 0.175
-  - 0.15
-  - 0.125
-  - 0.1
-  - 0.075
-  fireRangeValues:
-  - 5
-  - 10
-  - 15
-  - 20
-  - 25
-  - 30
-  - 35
-  - 40
-  - 45
-  costs: 64000000c80000002c01000090010000f401000058020000bc0200002003000084030000e80300004c040000b00400001405000078050000
+  incomeValues: []
+  incomeStartValue: 1
+  incomeIncreasingValue: 1
+  initYearValues: 
+  initYearStartValue: 1
+  initYearIncreasingValue: 1
+  fireRateValues: []
+  fireRateStartValue: 1
+  fireRateIncreasingValue: 1
+  secondFireRateIncreasingValue: 1
+  fireRateChangeLevelIndex: 1
+  fireRangeValues: []
+  fireRangeStartValue: 1
+  fireRangeIncreasingValue: 1
+  costs: 
+  costStartingValue: 1
+  costIncreasingValue: 0
 --- !u!1 &5054385360971807610
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,6 +235,7 @@ MonoBehaviour:
   incomeCostText: {fileID: 0}
   initYearCostText: {fileID: 0}
   weaponSlider: {fileID: 0}
+  fillImage: {fileID: 0}
   blackandWhiteImages:
   - {fileID: 0}
   - {fileID: 0}

@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
     }
     public void UpdatePlayerDamage()
     {
-        playerDamage = Player.instance.playerDamage;
+        playerDamage = Player.instance.currentPlayerDamage;
     }
 
     private void Update() 
