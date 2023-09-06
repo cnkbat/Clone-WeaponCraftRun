@@ -60,7 +60,7 @@ public class Gate : MonoBehaviour
         }
         else if(yearGate)
         {
-            int rand = Random.Range(5,12);
+            int rand = Random.Range(1,2);
             damage = rand;
             damageText.text = damage.ToString();
         }
@@ -133,7 +133,7 @@ public class Gate : MonoBehaviour
         {
             yearGate = true;
             gateOperatorText.text = "Init Year";
-            valueRand = Random.Range(-20,10);
+            valueRand = Random.Range(-5,4);
             gateValue = valueRand;
         }
 

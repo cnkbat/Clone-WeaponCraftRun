@@ -386,6 +386,46 @@ PrefabInstance:
       propertyPath: levelSpawnTransform
       value: 
       objectReference: {fileID: 1709083919}
+    - target: {fileID: 5054385360486088419, guid: 21838cc2e5d39af489bfd63649e07739, type: 3}
+      propertyPath: costStartingValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054385360486088419, guid: 21838cc2e5d39af489bfd63649e07739, type: 3}
+      propertyPath: fireRateStartValue
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054385360486088419, guid: 21838cc2e5d39af489bfd63649e07739, type: 3}
+      propertyPath: initYearStartValue
+      value: 1700
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054385360486088419, guid: 21838cc2e5d39af489bfd63649e07739, type: 3}
+      propertyPath: costIncreasingValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054385360486088419, guid: 21838cc2e5d39af489bfd63649e07739, type: 3}
+      propertyPath: fireRangeStartValue
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054385360486088419, guid: 21838cc2e5d39af489bfd63649e07739, type: 3}
+      propertyPath: incomeIncreasingValue
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054385360486088419, guid: 21838cc2e5d39af489bfd63649e07739, type: 3}
+      propertyPath: fireRateIncreasingValue
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054385360486088419, guid: 21838cc2e5d39af489bfd63649e07739, type: 3}
+      propertyPath: initYearIncreasingValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054385360486088419, guid: 21838cc2e5d39af489bfd63649e07739, type: 3}
+      propertyPath: fireRateChangeLevelIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054385360486088419, guid: 21838cc2e5d39af489bfd63649e07739, type: 3}
+      propertyPath: secondFireRateIncreasingValue
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 5054385360971807604, guid: 21838cc2e5d39af489bfd63649e07739, type: 3}
       propertyPath: endHud
       value: 
@@ -1003,7 +1043,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 195157056, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00000011920928
+      value: -0.0000001192093
       objectReference: {fileID: 0}
     - target: {fileID: 195157056, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1023,11 +1063,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 195157056, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000014944654
+      value: 0.000000022482142
       objectReference: {fileID: 0}
     - target: {fileID: 195157056, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000008355114
+      value: -0.0000000125691
       objectReference: {fileID: 0}
     - target: {fileID: 1606621306, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1047,11 +1087,99 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1606621306, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000013568205
+      value: 0.000000013568205
       objectReference: {fileID: 0}
     - target: {fileID: 1606621306, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000006160233
+      value: -0.000000006160233
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089198460456332555, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRate
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089198460456332555, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRange
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533921410428498, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533921410428498, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRate
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533921410428498, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRange
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533921650812549, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: damage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533921650812549, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533921650812549, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRange
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533921657482391, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRate
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533921657482391, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533922422112013, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533922422112013, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRate
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533922422112013, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533922518314935, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533922518314935, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRate
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533922518314935, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRange
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533922615474217, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: damage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533922615474217, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRate
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533922615474217, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533922823556829, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533922823556829, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRate
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731533922823556829, guid: ded76191a655b034ba3128b70616b00c, type: 3}
+      propertyPath: fireRange
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7969945570645533138, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1067,11 +1195,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7969945570645533138, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000014564111
+      value: 0.000000014564111
       objectReference: {fileID: 0}
     - target: {fileID: 7969945570645533138, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000031513987
+      value: -0.0000000031513987
       objectReference: {fileID: 0}
     - target: {fileID: 7969945571067046764, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: m_RootOrder
@@ -1135,31 +1263,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7969945571067046765, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: weaponChoosingInitYearsLimit.Array.data[0]
-      value: 1799
+      value: 1724
       objectReference: {fileID: 0}
     - target: {fileID: 7969945571067046765, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: weaponChoosingInitYearsLimit.Array.data[1]
-      value: 1819
+      value: 1749
       objectReference: {fileID: 0}
     - target: {fileID: 7969945571067046765, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: weaponChoosingInitYearsLimit.Array.data[2]
-      value: 1839
+      value: 1774
       objectReference: {fileID: 0}
     - target: {fileID: 7969945571067046765, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: weaponChoosingInitYearsLimit.Array.data[3]
-      value: 1859
+      value: 1799
       objectReference: {fileID: 0}
     - target: {fileID: 7969945571067046765, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: weaponChoosingInitYearsLimit.Array.data[4]
-      value: 1879
+      value: 1824
       objectReference: {fileID: 0}
     - target: {fileID: 7969945571067046765, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: weaponChoosingInitYearsLimit.Array.data[5]
-      value: 1899
+      value: 1874
       objectReference: {fileID: 0}
     - target: {fileID: 7969945571067046765, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: weaponChoosingInitYearsLimit.Array.data[6]
-      value: 1949
+      value: 1924
       objectReference: {fileID: 0}
     - target: {fileID: 7969945571067046765, guid: ded76191a655b034ba3128b70616b00c, type: 3}
       propertyPath: weaponChoosingInitYearsLimit.Array.data[7]
