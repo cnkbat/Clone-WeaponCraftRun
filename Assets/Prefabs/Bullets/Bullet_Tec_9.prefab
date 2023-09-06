@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -4051883738262795041}
   - component: {fileID: -8257029663725254662}
   - component: {fileID: -4675143330374317215}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bullet_Tec_9
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!65 &-4675143330374317215
 BoxCollider:

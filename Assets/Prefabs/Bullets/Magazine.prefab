@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1981999984}
   - component: {fileID: 765870533}
   - component: {fileID: 1351506467}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerDetector
   m_TagString: MagazinesPlayerDetector
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4606495914631621650}
   - component: {fileID: 5494524518231965736}
   - component: {fileID: 975392198}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayersCol
   m_TagString: MagazinesPlayerCol
   m_Icon: {fileID: 0}
@@ -829,7 +829,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &6790295641444422953
 BoxCollider:
@@ -945,7 +945,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &6016794371070475598
 BoxCollider:
@@ -1056,7 +1056,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &2831907474383616453
 BoxCollider:
@@ -1177,7 +1177,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &6131039666594620855
 BoxCollider:
@@ -1293,7 +1293,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &131820158285761509
 BoxCollider:
@@ -1404,7 +1404,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &4005137156161998429
 BoxCollider:

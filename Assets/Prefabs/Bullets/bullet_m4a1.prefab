@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3331669348447314135}
   - component: {fileID: 5384120023321371159}
   - component: {fileID: 1269555135413803708}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3424155602902394935}
   - component: {fileID: 4163528899614231107}
   - component: {fileID: 1174354630101927129}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 897045982483873759}
   - component: {fileID: 3664747890229942416}
   - component: {fileID: 8912302903936732622}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bullet_m4a1
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!65 &8912302903936732622
 BoxCollider:

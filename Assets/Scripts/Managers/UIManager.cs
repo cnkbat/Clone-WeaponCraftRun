@@ -151,7 +151,7 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateStartingHudTexts()
     {
-        currentLevelText.text = SceneManager.GetActiveScene().name;
+        currentLevelText.text = "Level " + (Player.instance.currentLevelIndex + 1).ToString();
         UpdateInitYearText();
         UpdateMoneyText();
         playerStarsText.text = Player.instance.stars.ToString();
@@ -174,7 +174,7 @@ public class UIManager : MonoBehaviour
     // Upgrades
     public void OnFireRateUpdatePressed()
     {
-        Debug.Log("presssed");
+        
         if(Player.instance.money >= UpgradeManager.instance.costs[Player.instance.fireRateValueIndex])
         {
             Player.instance.money -= UpgradeManager.instance.costs[Player.instance.fireRateValueIndex];

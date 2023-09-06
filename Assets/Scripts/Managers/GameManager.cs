@@ -68,6 +68,16 @@ public class GameManager : MonoBehaviour
         camStartingPos = mainCam.transform.localPosition;
     }
 
+    private void Update() 
+    {
+        endSniper.transform.Rotate(rotationSpeed * Time.deltaTime);
+        
+        if(Input.GetKeyDown(KeyCode.S))
+        {
+            Player.instance.SavePlayerData();
+        } 
+    }
+
     public void LevelChooser()
     {
         if(Player.instance.currentLevelIndex <= numOfPresetLevels)
@@ -83,11 +93,6 @@ public class GameManager : MonoBehaviour
     public void UpdatePlayerDamage()
     {
         playerDamage = Player.instance.currentPlayerDamage;
-    }
-
-    private void Update() 
-    {
-        endSniper.transform.Rotate(rotationSpeed * Time.deltaTime);
     }
 
     public void EndLevel()

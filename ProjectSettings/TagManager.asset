@@ -42,8 +42,8 @@ TagManager:
   - PlayerDetector
   - BrickWall
   - BulletsInClip
-  - 
-  - 
+  - OnlyPlayer
+  - Bullet
   - 
   - 
   - 

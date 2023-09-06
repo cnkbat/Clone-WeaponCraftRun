@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7663756327321748390}
   - component: {fileID: -1712613324612951133}
   - component: {fileID: 5216448621203301517}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bullet_Sawed_off_shotgun
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!65 &5216448621203301517
 BoxCollider:
