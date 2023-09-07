@@ -238,7 +238,7 @@ public class UIManager : MonoBehaviour
     public void FinishHud()
     {
         endHud.SetActive(true);
-        weaponSlider.gameObject.SetActive(false);
+        fillImage.gameObject.SetActive(false);
         initYearImage.SetActive(false);
         UpdateEndingHudTexts();
     }

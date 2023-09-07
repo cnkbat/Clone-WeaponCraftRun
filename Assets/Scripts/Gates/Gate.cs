@@ -73,7 +73,11 @@ public class Gate : MonoBehaviour
         {
             if(!other.GetComponent<Bullet>().stickmansBullet)
             {
-                TakeDamage();
+                if(!other.GetComponent<Bullet>().hasHit)
+                {
+                    TakeDamage();
+                    other.GetComponent<Bullet>().hasHit = true;
+                }
             }
             
             Destroy(other.gameObject);

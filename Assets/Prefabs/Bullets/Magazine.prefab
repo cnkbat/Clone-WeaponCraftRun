@@ -120,8 +120,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 13.078446, y: 9.474009, z: 1}
-  m_Center: {x: -0.60048026, y: 0.3690614, z: 0}
+  m_Size: {x: 13.078446, y: 9.474009, z: 1.6883632}
+  m_Center: {x: -0.60048026, y: 0.3690614, z: 0.2066614}
 --- !u!54 &975392198
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -294,6 +294,7 @@ MonoBehaviour:
   slidingGatePosRot: {x: 270, y: 0, z: 0}
   canTravel: 0
   travelPos: {fileID: 61774392634561587}
+  clip: {fileID: 4054093826061263229}
 --- !u!1 &989875563802736204
 GameObject:
   m_ObjectHideFlags: 0

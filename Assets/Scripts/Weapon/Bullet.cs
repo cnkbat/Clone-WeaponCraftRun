@@ -13,12 +13,11 @@ public class Bullet : MonoBehaviour
     private Vector3 firedPointCurrent;
     private float fireDist;
     [SerializeField] GameObject relatedWeapon; 
+    public bool hasHit = false;
 
     [Tooltip("Stickman Firing")]
     public bool stickmansBullet = false;
-
     [SerializeField] Vector3 rotationValue;
-
     [SerializeField] GameObject hitEffect;
  
     private void Start() 
@@ -65,14 +64,17 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(hasHit) return;
 
         if (other.CompareTag("Untagged"))
         {
             PlayHitFX();
             Destroy(gameObject);
+
         }
         if (other.CompareTag("EndingObstacle"))
         {
+            hasHit = true;
             if (!stickmansBullet)
             {
                 PlayHitFX();

@@ -31,6 +31,9 @@ public class Magazine : MonoBehaviour
     public bool canTravel;
     public Transform travelPos;
 
+    [Header("GameObject Clip")]
+    [SerializeField] GameObject clip;
+
     public void MagazineShot()
     {
         bulletsInClip[numOfBulletsInClip].SetActive(true);
@@ -119,6 +122,7 @@ public class Magazine : MonoBehaviour
             bulletsInClip[i].GetComponent<Rigidbody>().useGravity = true;
             bulletsInClip[i].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         }
+        clip.SetActive(false);
     }
 
     public void MagazineTravel()
