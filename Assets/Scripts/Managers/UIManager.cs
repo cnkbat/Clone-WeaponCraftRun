@@ -61,9 +61,9 @@ public class UIManager : MonoBehaviour
     }
     private void Start() 
     {
-        UpdateStartingHudTexts();
         MoveFinger();
         UpdateWeaponBar();
+        UpdateStartingHudTexts();
         reducerText.rectTransform.anchoredPosition = reducerTextResetPos;
         reducerText.gameObject.SetActive(false);
     }
@@ -152,6 +152,7 @@ public class UIManager : MonoBehaviour
     public void UpdateStartingHudTexts()
     {
         currentLevelText.text = "Level " + (Player.instance.currentLevelIndex + 1).ToString();
+
         UpdateInitYearText();
         UpdateMoneyText();
         playerStarsText.text = Player.instance.stars.ToString();
