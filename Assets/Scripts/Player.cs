@@ -67,6 +67,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float maxDisplacement = 0.2f;
     [SerializeField] private float maxPositionX , negativeMaxPositionX;
     private Vector2 _anchorPosition;
+    [SerializeField] float moveSensivity;
 
     private void Awake() 
     {
@@ -150,8 +151,8 @@ public class Player : MonoBehaviour
         private Vector3 GetNewLocalPosition(float displacementX)
         {
             var lastPosition = transform.localPosition;
-            var newPositionX = lastPosition.x + displacementX * 3.5f;
-            var newPosition = new Vector3(newPositionX, lastPosition.y, lastPosition.z +  forwardMoveSpeed *Time.deltaTime );
+            var newPositionX = lastPosition.x + displacementX * moveSensivity;
+            var newPosition = new Vector3(newPositionX, lastPosition.y, lastPosition.z +  forwardMoveSpeed * Time.deltaTime );
             return newPosition;
         }
         private float GetInput()

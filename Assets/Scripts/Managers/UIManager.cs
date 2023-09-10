@@ -63,9 +63,9 @@ public class UIManager : MonoBehaviour
     {
         MoveFinger();
         UpdateWeaponBar();
-        UpdateStartingHudTexts();
         reducerText.rectTransform.anchoredPosition = reducerTextResetPos;
         reducerText.gameObject.SetActive(false);
+        UpdateStartingHudTexts();
     }
     private void Update() 
     {
@@ -153,8 +153,6 @@ public class UIManager : MonoBehaviour
     {
         currentLevelText.text = "Level " + (Player.instance.currentLevelIndex + 1).ToString();
 
-        UpdateInitYearText();
-        UpdateMoneyText();
         playerStarsText.text = Player.instance.stars.ToString();
 
         fireRateLevelText.text = "Level " + (Player.instance.fireRateValueIndex + 1).ToString();
@@ -162,6 +160,8 @@ public class UIManager : MonoBehaviour
 
         fireRateCostText.text = "$" + (UpgradeManager.instance.costs[Player.instance.fireRateValueIndex].ToString());
         initYearCostText.text = "$" + (UpgradeManager.instance.costs[Player.instance.initYearValueIndex].ToString());
+        UpdateInitYearText();
+        UpdateMoneyText();
     }
     public void UpdateEndingHudTexts()
     {
