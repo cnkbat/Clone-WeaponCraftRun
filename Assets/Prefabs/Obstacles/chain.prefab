@@ -3195,7 +3195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f786016a4c9234b8f58503e698c700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 15
+  maxHealth: 8
   slider: {fileID: 9191837242168127226}
   chains:
   - {fileID: 4349165628386038252}
