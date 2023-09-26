@@ -287,7 +287,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   rotationDur: 0.2
   loadVFX: {fileID: 2611980319876071333}
-  moveSpeedNextGate: 10
+  moveSpeedNextGate: 40
   playerDetector: {fileID: 1981999982}
   playerCol: {fileID: 410967952163079852}
   slidingGateDOMoveDur: 0.2
